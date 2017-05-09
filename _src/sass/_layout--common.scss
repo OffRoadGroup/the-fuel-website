@@ -1,0 +1,73 @@
+.wrapper {
+	max-width:1500px;
+	margin:0 auto;
+}
+
+#accordeon {
+	li {
+		color: $black;
+	}
+	li.current {
+		background: $primary-color;
+		color: $white;
+		a {
+			color: $white;
+		}
+	}
+}
+
+.playbook-container a {
+	color: #000;
+}
+
+.button a {
+	color: #fff;
+}
+
+.fact-box {
+	background: #f2f2f2;
+    padding: 5px 40px;
+}
+
+.full-img {
+    box-shadow:inset 0 0 0 2000px rgba(255,255,255,0.3);
+}
+
+.slider-overlay {
+        width: 60%;
+        height: 100%;
+        right: 0;
+        background-color: $secondary-color;
+        top: 0;
+        position: absolute;
+        -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        h2, h4 {
+            margin: 0;
+        }
+        .overlay-content {
+            width: 46%;
+            margin: 0 auto;
+            top: 19%;
+            left: 4%;
+            position: relative;
+        }
+        @media screen and #{$brk-narrow} {
+            position: relative;
+            width: 100%;
+            -webkit-clip-path: none;
+            clip-path: none;
+            .overlay-content {
+                width: 100%;
+                top: 0;
+                left: 0;
+                height: 280px;
+                padding: 10px 20px;
+            }
+        }
+        @media screen and #{$brk-tablet-min} and #{$brk-wide} {
+            .overlay-content {
+                width: 70%;
+            }
+        }
+    }

@@ -1,0 +1,31 @@
+// Colors
+$gray       : #374140;
+$gray-light : #979797;
+$white      : #ffffff;
+$black      : rgb(40,42,41);
+$yellow		: rgb(228,190,33);
+$grey		: rgb(79,78,78);
+
+$primary-color 	: $yellow;
+$secondary-color: $grey;
+$tertiary-color	: $yellow;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,600,700,900');
+
+
+// Font Stacks
+$stack-opensans        : 'Open Sans', sans-serif;
+$stack-titillium        : 'Titillium Web', sans-serif;
+
+// Mixins
+@mixin transition($length) {
+    transition: all $length ease-out;
+}
+
+// Media Query Breakpoints
+ $brk-narrow    : '(max-width: 767px)';
+ $brk-tablet-min: '(min-width: 768px)'; 
+ $brk-wide      : '(max-width: 1023px)';
+ $brk-wide-min  : '(min-width: 1024px)';
+  

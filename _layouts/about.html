@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<header class="about-header">
+    <section class="clearfix full-img" style="background-image: url('/assets/img/about-header.jpg');">
+        <div class="grid spacing-copy movie-content-box">
+            <div class="col-4-12 no-padding tablet-col-1-2">
+                <h2 class="black">About us</h2>
+                <h6>{{site.data.contentful.spaces.proddata.webPagesContent[0].aboutUsHeader}}</h6> 
+                <p class="button gold"><a href="">Join the Fuel</a></p>
+            </div>
+            <img src="/assets/img/play-button.svg" class="play-btn">
+        </div>
+    </section>
+</header>
+
+<section class="spacing clearfix">
+    <div class="grid">
+        <div class="col-8-12 center-text center mission-box">
+            <p class="caps">Our mission</p>
+            <h4>{{site.data.contentful.spaces.proddata.webPagesContent[0].aboutUsOurMission}}</h4>
+        </div>
+    </div>
+</section>
+<section class="spacing-copy bg-beige clearfix">
+    <div class="grid">
+        <h3 class="center-text">Teaching Entrepreneurship In Prison</h3>
+        <div class="col-3-12 tablet-col-1-3">
+            <div class="round author-thumb push-right" style="background-image: url('{{site.data.contentful.spaces.proddata.webPagesContent[0].aboutUsTeachingInPrisonPicture.url}}'); margin-top:20px;"></div>
+        </div>
+        <div class="col-9-12 tablet-col-1-2">
+            <p class="big no-margin-top">
+            {{site.data.contentful.spaces.proddata.webPagesContent[0].teachingEntrepreneurshipInPrison | markdownify }}
+            </p>
+        </div>
+    </div>
+</section> 
+<section class="spacing-copy clearfix">
+    <h3 class="center-text">Writers in Residence</h3>
+    <div class="grid no-padding">
+        <div class="col-10-12 center headshots-all">
+            {% assign sorted_writers = site.data.contentful.spaces.proddata.writersInResidence | sort:"order" %}
+            {% for writer in sorted_writers %}
+                <div class="col-1-4 tablet-col-1-2">
+                    <div class="each-shot" style="background-image: url('{{writer.picture.url}}');"></div>
+                    <p class="bold caps no-margin-bottom">{{writer.name}}</p>
+                    <p class="no-margin-top">{{writer.title}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="clearfix leads-all">
+        <div class="grid spacing-copy border-top">
+         <h3 class="center-text">The Pit Crew</h3>
+
+            {% assign sorted_pitCrew = site.data.contentful.spaces.proddata.pitCrew | sort:"order" %}
+            {% for crew in sorted_pitCrew %}
+            <div class="grid">
+                <div class="leader">
+                    <div class="col-3-12 tablet-col-1-3">
+                        <div class="push-right lead-shot" style="background-image: url('{{crew.picture.url}}');"></div>
+                    </div>
+                    <div class="col-9-12 tablet-col-1-2">
+                        <p class="bold caps no-margin-top">{{crew.name}}</p><p>{{crew.title}}</p>
+                        {{ crew.bio | markdownify }}
+                    </div>
+                <div style="clear:both;"></div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div> 
+</section>
+
+
+<script type="text/javascript">
+    var aboutVideoId = "{{site.data.contentful.spaces.proddata.webPagesContent[0].aboutPageYoutubeVideoId}}"
+</script>

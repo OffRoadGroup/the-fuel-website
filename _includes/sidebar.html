@@ -1,0 +1,85 @@
+          <a href="/coming-soon/">
+              <div class="latest-events">
+                    <p class="t-font caps bold center-text">Click here for the <span class="color-red caps bold">latest events</span> in your area</p>
+                </div>
+            </a>
+            <div id="accordeon">
+                <h6 class="bg-black color-white center-text">EXPLORE TOPICS</h6>
+                <ul>
+                    <li {% if page.title == 'Life Inside' %} class="current" {% endif %} >
+                        <a href="/category/life-inside">
+                            <h6>Life Inside</h6>
+                        </a>
+                    </li>
+                    <li {% if page.title == 'Life Beyond' %} class="current" {% endif %} >
+                        <a href="/category/life-beyond">
+                            <h6>Life Beyond</h6>
+                        </a>
+                    </li>
+                    <li {% if page.title == 'Entrepreneurship' %} class="current" {% endif %} >
+                        <a href="/category/entrepreneurship">
+                            <h6>Entrepreneurship</h6>
+                        </a>
+                    </li>
+                    <li {% if page.title == 'Industry of Prison' %} class="current" {% endif %} >
+                        <a href="/category/industry-of-prison">
+                            <h6>Industry of Prison</h6>
+                        </a>
+                    </li> 
+                    <li {% if page.title == 'Mass Incarceration' %} class="current" {% endif %} >
+                        <a href="/category/mass-incarceration">
+                            <h6>Mass Incarceration</h6>
+                        </a>
+                    </li> 
+                    <li {% if page.title == 'Solutions' %} class="current" {% endif %} >
+                        <a href="/category/solutions">
+                            <h6>Solutions</h6>
+                        </a>
+                    </li> 
+                    <li {% if page.title == 'Justice News' %} class="current" {% endif %} >
+                        <a href="/category/justice-news">
+                            <h6>Justice News</h6>
+                        </a>
+                    </li> 
+                    <li {% if page.title == 'Healthy Self' %} class="current" {% endif %} >
+                        <a href="/category/healthy-self">
+                            <h6>Healthy Self</h6>
+                        </a>
+                    </li> 
+                </ul> 
+            </div>
+            <div class="sidebar-subscribe bg-black">
+                <form action="">
+                    <div class="form-container">
+                        <h4 class="center-text no-margin color-gold">Subscribe to our mailing list</h4>
+                        <br/>
+                        <p class="button gold"><a href="//eepurl.com/cH7YOb" target="_blank">Subscribe</a></p>
+                        <br/><br/>
+                    </div>
+                </form>
+                <p class="join-club color-white center-text">Join The Fuel
+                <span>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 404.308 404.309" style="enable-background:new 0 0 404.308 404.309;" xml:space="preserve"><g><path d="M0,101.08h404.308L202.151,303.229L0,101.08z" fill="#fff"/></g></svg><span></p>
+                <ul class="social-icons">
+                    <li>
+                        <a href="{{site.data.contentful.spaces.proddata.webPagesContent[0].facebookUrl}}" target="_blank">
+                            {% include svg-facebook.html %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{site.data.contentful.spaces.proddata.webPagesContent[0].facebookUrl}}" target="_blank">
+                            {% include svg-twitter.html %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{site.data.contentful.spaces.proddata.webPagesContent[0].facebookUrl}}" target="_blank">
+                            {% include svg-instagram.html %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{site.data.contentful.spaces.proddata.webPagesContent[0].facebookUrl}}" target="_blank">
+                            {% include svg-youtube.html %}
+                        </a>
+                    </li>
+                </ul>
+            </div>

@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<div class="homepage"> 
+{% for story in site.data.contentful.spaces.proddata.story %}
+    {% if story.isFirstStoryOnFrontPage == true %}
+        <header>
+            <section class="clearfix full-img aligner" style="background-image: url('{{story.heroImage.url}}');">
+                <div class="grid spacing-copy">
+                    <div class="col-4-12 no-padding">
+                        <h2 class="black">{{story.title}}</h2>
+                        <h6>{{story.subtitle}}</h6>
+                        <p class="button red"><a href="/story/{{story.title | slugify}}">View more</a></p>
+                    </div>
+                </div>
+            </section>
+        </header>
+    {% endif %}
+{% endfor %}
+<section class="section-copy center-text"> 
+    <h3>Top stories</h3>
+    <div class="topStories">
+
+    {% for story in site.data.contentful.spaces.proddata.story %}
+        {% if story.isTopStory == true %}
+        <div class="each-story">
+            <img src="{{story.heroImage.url}}" alt="{{story.heroImage.title}}">
+            <div class="slider-overlay">
+                <div class="overlay-content">
+                    <p class="caps">{{story.category}}</p>
+                    <h4>{{story.title}}</h4>
+                    <p>{{story.subtitle}}</p>
+                    <a href="/story/{{story.title | slugify}}"><p class="color-red">Read full story</p></a>
+                    {% if story.author %}<p class="t-font-smaller black">by {{story.author}}</p>{% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+
+    </div>
+</section>
+
+<section class="spacing-copy">
+<div class="grid">
+    <div class="sliderQuotes col-11-12 center no-padding">
+        {% for quote in site.data.contentful.spaces.proddata.quote %}
+            <div class="each-quote">
+                <div class="col-1-2">
+                    <h5 class="italic center-text">“{{quote.quoteText}}“</h5>
+                    <p class="caps bold center-text">{{quote.author}}</p>
+                    <p class="center-text">{{author.authorTitle}}</p>
+                </div>
+                <div class="col-1-2">
+                    <img class="round" src="{{quote.picture.url}}"/>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+</section>
+
+<!-- newsletter -->
+<section class="subscribe-form-box">
+    <div class="grid">
+        <div class="subscribe-form col-8-12 center no-padding">
+            {% include mailchimp.html %}           
+        </div>
+    </div>
+</section>
+
+<section class="spacing-copy">
+    <div class="grid news-container">
+        <div class="col-4-12 tablet-col-1-40 no-margin-top">
+            {% include sidebar.html %}
+        </div>
+        <div class="col-8-12 story-bar tablet-col-1-60 no-padding no-margin-top">
+        {% for story in site.data.contentful.spaces.proddata.story %}
+            {% if story.isTopStory != true %}
+                    <div class="col-1-2 story-item">
+                    <a href="/story/{{story.title |slugify }}">
+                        <div class="each-news" style="background-image: url('{{story.heroImage.url}}');">
+                            <div class="caption">
+                                {%if story.category%}<p class="button tag">{{ story.category }}</p>{%endif%}
+                                <h4>{{story.title}}</h4>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+            {% endif %}
+        {% endfor %}
+        <div class="clearfix"></div>
+            <div class="center-text news-btns">
+                <p class="button red"><a href="">See all stories</a></p>
+                <p class="button gold"><a href="">Subscribe</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="partners">
+        {% assign sorted_logos = site.data.contentful.spaces.proddata.partnerLogo | sort:"order" | limit: 6 %}
+        {% for logo in sorted_logos %}
+        <div class="col-1-3 bg-gray tablet-col-1-2">
+             <img src="{{ logo.partnerLogo.url }}" alt="{{ logo.name}}">
+        </div>
+        {% endfor %}
+    </div>
+</section>
+</div>
+

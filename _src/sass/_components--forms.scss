@@ -1,0 +1,24 @@
+.form-container {
+	padding: 50px;
+	margin: 2em 0;
+	h6 {
+		font-weight: 700;
+	}
+	input {
+		height: 46px;
+    	margin-right: 10px;
+    	min-width: 38%;
+    	padding: 10px;
+    	font-family: $stack-opensans;
+	}
+	label {
+		display: none;
+	}
+	input[type="submit"] {
+		border: 1px solid #000;
+    	background: #000;
+    	color: white;
+    	min-width:110px;
+    	display: inline-block;
+	}
+}

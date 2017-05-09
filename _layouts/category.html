@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% assign pageCategory = page.title | downcase %}
+
+<div class="category-page">
+	<section class="spacing-copy">
+	    <div class="grid news-container">
+	        <div class="col-4-12"> 
+	            {% include sidebar.html %}
+	        </div>
+	        <div class="col-8-12 story-bar">
+	        <h3>Category: {{page.title | capitalize}}</h3>
+	        {% for story in site.data.contentful.spaces.proddata.story %}
+	        {% assign postCategory = story.category | downcase %}
+	            {% if postCategory == pageCategory %}
+	                    <div class="col-1-2 story-item no-padding">
+	                    <a href="/story/{{story.title |slugify }}">
+	                        <div class="each-news" style="background-image: url('{{story.heroImage.url}}');">
+	                            <div class="caption">
+	                                {%if story.category%}<p class="button tag">{{ story.category }}</p>{%endif%}
+	                                <h4>{{story.title}}</h4>
+	                            </div>
+	                        </div>
+	                    </a>
+	                    </div>
+	            {% endif %}
+	        {% endfor %}
+	        <div style="clear:both"></div>
+	            <div class="center-text news-btns">
+	                <p class="button red"><a href="/">See all stories</a></p>
+	                <p class="button gold"><a href="//eepurl.com/cH7YOb" target="_blank">Subscribe</a></p>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+</div>

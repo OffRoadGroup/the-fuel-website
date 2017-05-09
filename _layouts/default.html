@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+      <div class="wrapper {{ page.title | downcase }} {% if page.group %} {{ page.group }}{% endif %}">
+        {{ content }}
+      </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

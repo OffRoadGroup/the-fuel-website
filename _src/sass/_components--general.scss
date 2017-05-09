@@ -1,0 +1,136 @@
+ul li {
+	display: inline-block;
+}
+// Helpers
+.no-margin {
+    margin: 0 !important;
+}
+.no-padding {
+    padding: 0 !important;
+}
+.no-margin-top {
+	margin-top: 0;
+}
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+.border-top {
+	border-top: 1px solid $gray-light;
+}
+.center {
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+}
+.clearfix {
+	clear: both;
+}
+.flex-item-left, .flex-item-right {
+    display: flex;
+    flex: 1;
+}
+.flex-item-right {
+    justify-content: flex-end;
+}
+.aligner {
+  	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.aligner-item {
+  	max-width: 50%;
+}
+.aligner-column {
+	display: flex;
+  	justify-content: center;
+  	flex-direction: column;
+}
+.center-text {
+    text-align: center;
+    display: block;
+}
+.round {
+	border-radius: 50%;
+	border: 4px solid $tertiary-color;
+}
+.spacing {
+	padding: 90px 0;
+	@media screen and #{$brk-wide} {
+    	padding: 45px 0;
+    }
+}
+.spacing-copy {
+	padding: 50px 0;
+    @media screen and #{$brk-narrow} {
+        padding: 20px 0;
+    }
+}
+.overlay-red-skewed {
+	&:after {
+		content: '';
+		background-color: $primary-color;
+		opacity: 0.5;
+		-webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+	}
+}
+.full-img { // used for full bleed images with content inside
+	height: 500px;
+	background-repeat: no-repeat; 
+    background-size: cover;
+    padding: 0 90px;
+    background-position: 50%;
+    @media screen and #{$brk-wide} {
+    	padding: 0 20px;
+    }
+}
+.caption {
+	bottom: 0;
+    color: #fff;
+    padding: 0 20px;
+    position: absolute;
+    z-index: 99;
+    h4 {
+    	text-shadow: 1px 1px 5px #000;
+    }
+}
+.tag {
+	background-color: rgba(0,0,0,0.4);
+}
+//Background colors and copy colors 
+.color-white {
+	color: $white;
+}
+.color-red {
+	color: $primary-color;
+}
+.color-gold {
+	color: $tertiary-color;
+}
+.bg-black {
+	background-color: $black;
+}
+.bg-beige {
+	background-color: $secondary-color;
+}
+.bg-red {
+	background-color: $primary-color;
+}
+.bg-gray {
+	background-color: $gray;
+}
+
+//slick styling
+.slick-prev:before, .slick-next:before {
+	font-size: 35px !important;
+	color: $tertiary-color !important;
+}
+.slick-prev:before {
+	margin-left: -47px;
+}

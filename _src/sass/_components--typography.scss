@@ -1,0 +1,118 @@
+//typography for titillium 
+h1, h2, h3, h4 {
+	font-family: $stack-titillium;
+	font-weight: 400;
+}
+h1 {
+	font-size: 52px;
+	font-weight: 700; 
+}
+h2 {
+	font-size: 42px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	&.t-font-smaller {
+		font-size: 36px;
+	}
+	@media screen and #{$brk-narrow} {
+		font-size: 32px;
+		&.t-font-smaller {
+			font-size: 26px;
+		}
+	}
+}
+h3 {
+	font-size: 28px;
+	@media screen and #{$brk-narrow} {
+		font-size: 24px;
+	}
+}
+h4 {
+	font-size: 24px;
+	@media screen and #{$brk-narrow} {
+		font-size: 20px;
+	}
+}
+p.t-font {
+	font-family: $stack-titillium;
+	font-size: 18px;
+	font-weight: 700;
+}
+.black {
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.caps {
+	text-transform: uppercase;
+}
+.bold {
+	font-weight: 700;
+}
+//typography for openSans 
+p, h5, h6 {
+	font-family: $stack-opensans;
+	font-weight: 400;
+}
+h5 {
+	font-size: 24px;
+	@media screen and #{$brk-narrow} {
+		font-size: 20px;
+	}
+	&.italic {
+		font-size: 28px;
+		font-style: italic;
+		@media screen and #{$brk-narrow} {
+			font-size: 24px;
+		}
+	}
+}
+h6 {
+	font-size: 20px;
+	margin: 15px 0;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 500;
+	&.big {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	&.small {
+		font-size: 12px;
+	}
+	&.caps {
+		font-size: 14px;
+	}
+}
+
+.story-content {
+	p {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+	blockquote {
+		padding: 0;
+		margin:0;
+		p {
+			font-size: 28px;
+    		font-style: italic;		
+    		&:before, &:after {
+    			content: "\"";
+    		}
+    		@media screen and #{$brk-narrow} {
+    			font-size: 18px;
+    		}
+		}
+	}
+	
+}
+
+a {
+	text-decoration: none;
+	color: $primary-color;
+	&:hover {
+		text-decoration: underline;
+	}
+}

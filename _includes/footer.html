@@ -1,0 +1,68 @@
+<footer class="bg-black clearfix">
+    <div class="grid aligner">
+        <div class="flex-item-left creds">
+            <img src="/assets/img/logo.png">
+            <ul>
+                <li><p class="small color-white">&#64;2017 The Fuel</p></li>
+                <li><p class="small color-white">Privacy</p></li>
+                <li><p class="small color-white">Terms</p></li>
+            </ul>
+        </div>
+        <div class="flex-item-right social-icons-box">
+            <ul class="social-icons aligner">
+                <li>
+                    <a href="{{site.data.contentful.spaces.proddata.webPagesContent[0].facebookUrl}}" target="_blank">
+                        {% include svg-facebook.html %}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{site.data.contentful.spaces.proddata.webPagesContent[0].twitterUrl}}" target="_blank">
+                        {% include svg-twitter.html %}
+                   </a>
+                </li>
+                <li>
+                    <a href="{{site.data.contentful.spaces.proddata.webPagesContent[0].instagramUrl}}" target="_blank">
+                        {% include svg-instagram.html %}
+                   </a>
+                </li>
+                <li>
+                    <a href="{{site.data.contentful.spaces.proddata.webPagesContent[0].youtubeUrl}}" target="_blank">
+                        {% include svg-youtube.html %}
+                   </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/slick/slick.min.js"></script>
+<script src="/assets/js/lib/main.js"></script>
+<script type="text/javascript">
+    $('.topStories').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: false,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true //,
+      // responsive: [{     //uncomment this to have slides stack on mobile
+      //   breakpoint: 767,
+      //       settings: "unslick"
+      //   }]
+    });
+   $('.sliderQuotes').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+        arrows: true,
+        dots: false
+   });
+
+  
+</script>
+

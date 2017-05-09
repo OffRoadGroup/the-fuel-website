@@ -1,0 +1,45 @@
+# Site settings
+title: The Fuel
+email: scot@gooffroad.co
+description: >
+  The Fuel's Writer-In-Residence programs trains people 
+  inside prisons and jails to use the power of the pen as a pathway to success.
+baseurl: ""
+url: "https://www.the-fuel.com" # the base hostname & protocol for your site
+image_path: '/assets/img'
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+exclude: ['_sass', '_src', '_grunt', 'node_modules', 'Gruntfile.js', 'package.json', 'README.md', 'Gemfile', 'build.sh']
+
+# Enabling gems
+gems: [
+"jekyll-contentful"
+]
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values: 
+      layout: "post"
+      permalink: /blog/:title
+
+contentful:
+  preview: No 
+  production_access_token: FUEL_CONTENTFUL_ACCESS_TOKEN
+  preview_access_token: 5f2d29a358c334582834eecfdc20a1cc0e40b16cf8c812f46c81b8bf1d1822df
+  space: FUEL_CONTENTFUL_SPACE_ID
+  content_types:
+   - "story"
+  spaces:
+    - proddata: # Jekyll _data folder identifier - Required
+        space: FUEL_CONTENTFUL_SPACE_ID        # Required
+        access_token: FUEL_CONTENTFUL_ACCESS_TOKEN # Required
+        cda_query:                 # Optional
+          include: 2
+          limit: 100
+        content_types:             # Optional
+         cat: story
+ 

@@ -1,0 +1,33 @@
+.button {
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	padding: 15px 30px;
+	font-size: 12px;
+	a {
+		color: $white;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: $stack-opensans;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&.gold {
+		background-color: $tertiary-color;
+	}
+	&.red {
+		background-color: $primary-color;
+	}
+	&.skewed {
+		padding-left: 40px;
+		-webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+		@media screen and #{$brk-narrow} {
+			padding-left: 25px;
+		}
+	}
+}
+p.button {
+	margin: 0;
+}
