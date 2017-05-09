@@ -29,7 +29,7 @@ defaults:
 contentful:
   preview: No 
   production_access_token: FUEL_CONTENTFUL_ACCESS_TOKEN
-  preview_access_token: 5f2d29a358c334582834eecfdc20a1cc0e40b16cf8c812f46c81b8bf1d1822df
+  preview_access_token: FUEL_PREVIEW_TOKEN
   space: FUEL_CONTENTFUL_SPACE_ID
   content_types:
    - "story"
