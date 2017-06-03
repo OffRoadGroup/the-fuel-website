@@ -53,6 +53,7 @@ nav {
 	.logo {
 		margin-left: 90px;
 		float: left;
+		height: 50px;
 		@media screen and #{$brk-narrow} {
 			margin-left: 10px;
 			width: 60px;

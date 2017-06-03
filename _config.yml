@@ -7,6 +7,7 @@ description: >
 baseurl: ""
 url: "https://www.the-fuel.com" # the base hostname & protocol for your site
 image_path: '/assets/img'
+twitter_username: 'the_fuel'
 
 # Build settings
 markdown: kramdown
