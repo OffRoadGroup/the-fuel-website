@@ -14,10 +14,8 @@ markdown: kramdown
 permalink: pretty
 exclude: ['_sass', '_src', '_grunt', 'node_modules', 'Gruntfile.js', 'package.json', 'README.md', 'Gemfile', 'build.sh']
 
-# Enabling gems
-gems: [
-"jekyll-contentful"
-]
+plugins:
+  - jekyll-contentful-data-import
 
 defaults:
   -
@@ -28,19 +26,14 @@ defaults:
       permalink: /blog/:title
 
 contentful:
-  preview: No 
-  production_access_token: FUEL_CONTENTFUL_ACCESS_TOKEN
-  preview_access_token: FUEL_PREVIEW_TOKEN
-  space: FUEL_CONTENTFUL_SPACE_ID
-  content_types:
-   - "story"
   spaces:
     - proddata: # Jekyll _data folder identifier - Required
-        space: FUEL_CONTENTFUL_SPACE_ID        # Required
-        access_token: FUEL_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:                 # Optional
+        space: jo6vhcg97vhs         # Required
+        access_token: ed7b8f79a95864735f8b842b475bdb379c42ca92f45dc318994daec6e9000a26  # Required
+        cda_query:                  # Optional
           include: 2
           limit: 100
-        content_types:             # Optional
-         cat: story
- 
+        all_entries: true           # Optional - Defaults to false, only grabbing the amount set on CDA Query
+        all_entries_page_size: 1000 # Optional - Defaults to 1000, maximum amount of entries per CDA Request for all_entries
+        content_types:              # Optional
+          cat: story
