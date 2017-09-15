@@ -3,5 +3,6 @@ source 'https://rubygems.org'
 gem "jekyll"
 
 group :jekyll_plugins do
+  gem "jekyll-contentful"
   gem "jekyll-contentful-data-import"
 end

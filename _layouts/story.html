@@ -29,8 +29,8 @@ layout: default
                 </div>
             </div>
             <div class="col-8-12 no-padding story-content">
-                <p class="big">{{page.contentful_fields.contentAboveNewsletterLink | markdownify }}</p>
-
+                <p class="big">{{page.contentful_fields.contentAboveNewsletter | markdownify }}</p>
+                
                 {% if page.contentful_fields.factBox %}
                 <blockquote class="fact-box">
                   <p>{{ page.contentful_fields.factBox }}</p>

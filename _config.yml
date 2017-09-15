@@ -7,15 +7,16 @@ description: >
 baseurl: ""
 url: "https://www.the-fuel.com" # the base hostname & protocol for your site
 image_path: '/assets/img'
-twitter_username: 'the_fuel'
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 exclude: ['_sass', '_src', '_grunt', 'node_modules', 'Gruntfile.js', 'package.json', 'README.md', 'Gemfile', 'build.sh']
 
-plugins:
-  - jekyll-contentful-data-import
+# Enabling gems
+gems: [
+"jekyll-contentful"
+]
 
 defaults:
   -
@@ -26,14 +27,19 @@ defaults:
       permalink: /blog/:title
 
 contentful:
+  preview: No 
+  production_access_token: ed7b8f79a95864735f8b842b475bdb379c42ca92f45dc318994daec6e9000a26
+  preview_access_token: 5f2d29a358c334582834eecfdc20a1cc0e40b16cf8c812f46c81b8bf1d1822df
+  space: jo6vhcg97vhs
+  content_types:
+   - "story"
   spaces:
     - proddata: # Jekyll _data folder identifier - Required
-        space: jo6vhcg97vhs         # Required
-        access_token: ed7b8f79a95864735f8b842b475bdb379c42ca92f45dc318994daec6e9000a26  # Required
-        cda_query:                  # Optional
+        space: jo6vhcg97vhs        # Required
+        access_token: ed7b8f79a95864735f8b842b475bdb379c42ca92f45dc318994daec6e9000a26 # Required
+        cda_query:                 # Optional
           include: 2
-          limit: 100
-        all_entries: true           # Optional - Defaults to false, only grabbing the amount set on CDA Query
-        all_entries_page_size: 1000 # Optional - Defaults to 1000, maximum amount of entries per CDA Request for all_entries
-        content_types:              # Optional
-          cat: story
+          limit: 300
+        content_types:             # Optional
+         cat: story
+ 

@@ -1,9 +1,9 @@
 {
-  "name": "the-fuel.com",
+  "name": "athletescouncil.com",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OffRoadGroup/the-fuel-website"
+    "url": "https://github.com/Athletesplaybook/athletescouncil"
   },
   "devDependencies": {
     "glob": "^5.0.10",

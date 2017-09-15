@@ -49,7 +49,7 @@ layout: default
     <h3 class="center-text">Writers in Residence</h3>
     <div class="grid no-padding">
         <div class="col-10-12 center headshots-all">
-            {% assign sorted_writers = site.data.contentful.spaces.proddata.writersInResidence | sort:"order" %}
+            {% assign sorted_writers = site.data.contentful.spaces.proddata.writersInResidence%}
             {% for writer in sorted_writers %}
                 <div class="col-1-4 tablet-col-1-2">
                     <div class="each-shot" style="background-image: url('{{writer.picture.url}}');"></div>
