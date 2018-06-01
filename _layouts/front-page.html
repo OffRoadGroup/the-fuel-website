@@ -83,7 +83,7 @@ layout: default
             {% include sidebar.html %}
         </div>
         <div class="col-8-12 story-bar tablet-col-1-60 no-padding no-margin-top">
-        {% for story in site.data.contentful.spaces.proddata.story %}
+        {% for story in site.data.contentful.spaces.proddata.story limit:10 %}
             {% if story.isTopStory != true %}
                     <div class="col-1-2 story-item">
                     <a href="/story/{{story.title |slugify }}">

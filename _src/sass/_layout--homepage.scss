@@ -157,6 +157,12 @@
         }
         .join-club {
             text-decoration: underline;
+            a {
+                color: #fff;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
         }
         span svg {
             width: 10px;
@@ -178,7 +184,7 @@
                 svg {
                     width: 24px;
                     height: 24px;
-                    fill: $white;
+                    fill: $teal;
                 }
             }
         }

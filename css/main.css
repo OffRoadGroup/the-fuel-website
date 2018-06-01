@@ -814,6 +814,10 @@ footer {
       margin-bottom: 0; }
   .homepage .sidebar-subscribe .join-club, .category-page .sidebar-subscribe .join-club {
     text-decoration: underline; }
+    .homepage .sidebar-subscribe .join-club a, .category-page .sidebar-subscribe .join-club a {
+      color: #fff; }
+      .homepage .sidebar-subscribe .join-club a:hover, .category-page .sidebar-subscribe .join-club a:hover {
+        color: #e4be21; }
   .homepage .sidebar-subscribe span svg, .category-page .sidebar-subscribe span svg {
     width: 10px;
     height: 10px;
@@ -832,7 +836,7 @@ footer {
       .homepage .sidebar-subscribe .social-icons li svg, .category-page .sidebar-subscribe .social-icons li svg {
         width: 24px;
         height: 24px;
-        fill: #ffffff; }
+        fill: #156e87; }
 .homepage #accordeon, .category-page #accordeon {
   background: #4f4e4e;
   width: 85%;
