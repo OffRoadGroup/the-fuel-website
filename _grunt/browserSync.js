@@ -1,17 +1,12 @@
 module.exports = {
-	files: {
-        src : ['_site/css/*.css']
+    bsFiles: {
+        src : [
+            '/assets/css/*.css',
+            '**/*.html'
+        ]
     },
     options: {
         watchTask: true,
-        ghostMode: {
-            clicks: true,
-            scroll: true,
-            links: true,
-            forms: true
-        },
-        server: {
-            baseDir: '_site'
-        }
+        server: './_site'
     }
 }
