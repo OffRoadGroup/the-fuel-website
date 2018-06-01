@@ -15,7 +15,7 @@ layout: default
                     </div>
                 </div>
             </section>
-        </header> 
+        </header>   
     {% endif %}
 {% endfor %}
 <section class="section-copy center-text"> 
@@ -29,7 +29,7 @@ layout: default
             <div class="slider-overlay">
                 <div class="overlay-content">
                     <p class="caps">{{story.category}}</p>
-                    <h4>{{story.title}}</h4>
+                    <p class="t-font-smaller black" style="font-size: 16px;">{{story.title}}</p>
                     <p>{{story.subtitle}}</p>
                     <a href="/story/{{story.title | slugify}}"><p class="color-red">Read full story</p></a>
                     {% if story.author %}

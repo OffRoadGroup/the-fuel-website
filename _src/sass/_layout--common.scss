@@ -5,7 +5,8 @@
 
 #accordeon {
 	li {
-		color: $black;
+        color: $black;
+        text-align: center;
 	}
 	li.current {
 		background: $primary-color;
@@ -33,11 +34,22 @@
     box-shadow:inset 0 0 0 2000px rgba(255,255,255,0.3);
 }
 
+#newsletter {
+    h4 {
+        letter-spacing: 1px;
+    }
+    input[type="submit"]:hover {
+        background-color: $primary-color;
+        transition: all .3s;
+        color: #000;
+    }
+}
+
 .slider-overlay {
         width: 60%;
         height: 100%;
         right: 0;
-        background-color: $secondary-color;
+        background-color: $primary-color;
         top: 0;
         position: absolute;
         -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
@@ -45,6 +57,9 @@
         h2, h4 {
             margin: 0;
         }
+        .color-red {
+            color: $secondary-color;
+        } 
         .overlay-content {
             width: 46%;
             margin: 0 auto;
